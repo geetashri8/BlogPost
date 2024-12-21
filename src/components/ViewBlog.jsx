@@ -18,13 +18,16 @@ export default function ViewBlog(){
     return (
         <>
         <header>
-            
+            Welcome home!
         </header>
         <div className="view-blog">
           <h1>{blogHeading}</h1>
           <p>{blogBody}</p>
         </div>
-        <footer></footer>
+        <footer>
+          <p>&copy; 2024 Geetashree. All Rights Reserved.</p>
+        </footer>
         </>
     );
 }
+

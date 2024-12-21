@@ -4,24 +4,35 @@ body {
 }
 
 header {
-    float:top;
-    height:70px;
-    width:100%;
-    background-color: #473C33;
+    
+    height:100px;
+    width:80%;
+    background-color: #FDA769;
+    text-align: center;
+    color:aliceblue;
+    margin-left:10%;
+    font-size: 30px;
+    padding-top: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 footer {
-    float:bottom;
+    
     height:70px;
     width:100%;
+    margin-top:-20px;
     background-color: #473C33;
+    color:aliceblue;
+    padding-top:20px;
+    text-align: center;
 }
 
 .view-blog {
     /*need to do changes for better css*/
      height:98vh;
-     width:100%;
-     border:2px solid;
+     width:80%;
+     
      text-align: center;
      margin:auto;
      background-color:#ABC270;
