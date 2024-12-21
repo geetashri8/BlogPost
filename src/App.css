@@ -1,38 +1,221 @@
 .App {
+  display:flex;
+  
+  text-align: center;
+  background-image: url("./images/bg1.webp");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  
+  height: 100vh;
+  width: 100%;
+}
+
+.create-new {
+
+  margin-top: 2em;
+  margin-left:6em;
+  height: 850px;
+  width: 1000px;
+  
+
+  
+}
+.create-new>textarea {
+  height: 700px;
+  width: 1000px;
+  margin-left: -300px ;
+  margin-top:-60px;
+  padding: 0px;
+  background-color: #fbf6e2ce;
+  border: 2px solid #0C0C0C;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px #ECCEAE;
+  font-size:20px;
+  font-family: cursive;
+
+}
+span.span-create {
+  display:inline-block;
+  
+  height:30px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: -350px;
+  margin-bottom: 60px;
+  margin-right: -80px;
+
+}
+.rightX {
+  
+  bottom:100px;
+  height:30px;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 920px;
+  margin-right:-30px;
+  border: 1px solid #0C0C0C;
+  border-radius: 5px;
+  background-color: #E68369;
+  
+  
+  
+}
+
+#generatetitle {
+
+  border: 2px solid ;
+  border-radius: 7px;
+  height: 50px;
+  width: 150px;
+  
+  background-color: #90B77D;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+
+.drop-down-style {
+  margin-top: 3em;
+  margin-left:3em;
+  margin-bottom: 50px;
+  border-radius: 7px;
+  height: 45px;
+  width: 150px;
+  display:none;
+
+  
+  
+}
+.drop-down-style>select {
+  
+  background-color: #90B77D;
+  border: 2px solid ;
+  border-radius: 7px;
+  height: 45px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.drop-down-style>select>option {
+  background-color: #ECCEAE;
+  border: 2px solid ;
+  border-radius: 7px;
+  height: 45px;
+  width: 150px;
+}
+
+
+
+
+.posts-container {
+  margin-top: 8.5em;
+  margin-left:2em;
+  width:500px;
+  height:700px;
+  
+  overflow-y:scroll;
+  
+  
+
+  border: 2px solid #0C0C0C;
+  background-color: #fbf6e2a2;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px #ECCEAE;
+}
+
+
+
+.posts-container >div> table {
+  width:100%;
+  border-collapse: collapse;
+  
+
+}
+
+.posts-container >div> table>thead>tr>th {
+  
+  height:50px;
+  border-bottom: 2px solid;
+  background-color: #E68369;
+  padding:0px;
+  margin:0px;
+  
+
+}
+
+.posts-container >div> table>tbody>tr>td {
+  width:395px;
+  height:50px;
+  padding:2px;
+  background-color:#ECCEAE;
+  border-radius: 3px;
+  border-bottom: 2px solid;
+}
+
+
+
+.posts-container > table>tbody>tr>td:hover {
+  background-color: #FBF6E2;
+}
+
+.save-and-view {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6em;
+  margin-left:4em;
+  
+}
+.save-and-view>button {
+  border: 2px solid ;
+  border-radius: 7px;
+  height: 55px;
+  width: 150px;
+  margin: 50px 50px 50px;
+  background-color: #90B77D;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+
+.btn-other-post {
+  height:30px;
+  width:60px;
+  margin:0px 25px 0px;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: #90B77D;
+}
+
+.Content{
+  height: 200px;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

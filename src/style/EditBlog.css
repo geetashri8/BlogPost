@@ -1,0 +1,48 @@
+body {
+    background-image:url("../images/bg1.webp"); 
+    background-size: cover;
+}
+
+
+.create-new {
+    display:flex;
+    flex-direction:column;
+    margin-top: 50px;
+    margin-left:450px;
+    height: 850px;
+    width: 1000px;
+    justify-content: center;
+    
+    
+  
+    
+  }
+  .create-new>div>textarea {
+    height: 700px;
+    width: 1000px;
+    margin: -40px;
+    padding: 0px;
+    background-color: #fbf6e2de;
+    border: 2px solid #0C0C0C;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ECCEAE;
+    font-size:20px;
+    font-family: cursive;
+  
+  }
+  .lefth3 {
+    float:left;
+    margin:-75px 0px 0px -40px;
+
+  }
+
+  .saveEdit {
+    border: 2px solid ;
+    border-radius: 7px;
+    height: 55px;
+    width: 150px;
+    margin:50px 0px 0px 380px;
+    background-color: #90B77D;
+    font-size: 20px;
+    font-weight: bold;
+  }

@@ -1,0 +1,36 @@
+body {
+    background-color: #ABC270;
+    height:98vh;
+}
+
+header {
+    float:top;
+    height:70px;
+    width:100%;
+    background-color: #473C33;
+}
+
+footer {
+    float:bottom;
+    height:70px;
+    width:100%;
+    background-color: #473C33;
+}
+
+.view-blog {
+    /*need to do changes for better css*/
+     height:98vh;
+     width:100%;
+     border:2px solid;
+     text-align: center;
+     margin:auto;
+     background-color:#ABC270;
+
+   }
+
+  h1 {
+    height:100px;
+    background-color: #FEC868 ;
+    margin-top: -3px;
+    font-size: medium;
+  } 
