@@ -11,7 +11,7 @@ export const generateContent = async (prompt) => {
     const result = await model.generateContent(prompt);
     console.log(result.response.text());
     let str = result.response.text();
-    let strArr= str.trim().split("\n");
+    let strArr= str.trim().split("\n\n");
 
     return strArr;
     

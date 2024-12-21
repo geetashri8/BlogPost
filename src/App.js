@@ -17,7 +17,7 @@ function App() {
 
   async function GeminiContent(generatetitle, dropdown, createnew) {
     textArea = document.getElementById(createnew).value;
-    let prompt = "generate 3 titles for the paragraph given - " + textArea;
+    let prompt = "generate 3 titles for the paragraph given without number it,just the titles in three rows - " + textArea;
     console.log(prompt);
 
     let generatedTitleArr = await generateContent(prompt);
