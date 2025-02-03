@@ -1,23 +1,30 @@
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import "./App.css";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 
-import CreateNew from './components/CreateNew.jsx';
-import OtherPosts from './components/OtherPosts.jsx';
-import TitleDropDown from './components/TitleDropDown.jsx';
-import { generateContent } from './components/GeminiModel.jsx';
-import ViewBlog from './components/ViewBlog.jsx';
-import {saveBlog } from './components/Save.jsx';
-import EditBlog  from './components/EditBlog.jsx';
+import CreateNew from "./components/CreateNew.jsx";
+import OtherPosts from "./components/OtherPosts.jsx";
+import TitleDropDown from "./components/TitleDropDown.jsx";
+import { generateContent } from "./components/GeminiModel.jsx";
+import ViewBlog from "./components/ViewBlog.jsx";
+import { saveBlog } from "./components/Save.jsx";
+import EditBlog from "./components/EditBlog.jsx";
 
 function App() {
   const [titleArr, setTitleArr] = React.useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   let textArea = "";
 
   async function GeminiContent(generatetitle, dropdown, createnew) {
     textArea = document.getElementById(createnew).value;
-    let prompt = "generate 3 titles for the paragraph given without number it,just the titles in three rows - " + textArea;
+    let prompt =
+      "generate 3 titles for the paragraph given without number it,just the titles in three rows - " +
+      textArea;
     console.log(prompt);
 
     let generatedTitleArr = await generateContent(prompt);
@@ -29,23 +36,34 @@ function App() {
   }
 
   function handleViewBlog() {
-    navigate('/view-blog'); // Call navigate here
+    navigate("/view-blog"); // Call navigate here
   }
-  function handleSave(){
+  function handleSave() {
     saveBlog();
-  
   }
 
   return (
     <div className="App">
-      <OtherPosts />
-      <CreateNew />
+      <div>
+        <OtherPosts />
+      </div>
+      <div>
+        <CreateNew />
+      </div>
+
       <div className="save-and-view">
-        <button id="generatetitle" onClick={() => GeminiContent("generatetitle", "dropdown", "createnew")}>
+        <button
+          id="generatetitle"
+          onClick={() =>
+            GeminiContent("generatetitle", "dropdown", "createnew")
+          }
+        >
           Generate Title
         </button>
         <TitleDropDown titleArr={titleArr} />
-        <button id="save" onClick={handleSave} >Save</button>
+        <button id="save" onClick={handleSave}>
+          Save
+        </button>
         <button id="view" onClick={handleViewBlog}>
           View
         </button>

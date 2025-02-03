@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import '../App.css';
-import { getBlogBody } from './Save.jsx';
-import { viewBlogBody } from './ViewBlog.jsx';
+import { useState } from "react";
+import "../App.css";
+import { getBlogBody } from "./Save.jsx";
+import { viewBlogBody } from "./ViewBlog.jsx";
 
 function CreateNew() {
   const [textArea, setTextArea] = useState("");
-
- 
 
   const handleX = () => {
     setTextArea("");
@@ -27,13 +25,15 @@ function CreateNew() {
           X
         </button>
       </div>
-      <textarea
-        type="text"
-        value={textArea}
-        onChange={handleText}
-        id="createnew"
-        name="createnew"
-      ></textarea>
+      <div className="textarea">
+        <textarea
+          type="text"
+          value={textArea}
+          onChange={handleText}
+          id="createnew"
+          name="createnew"
+        ></textarea>
+      </div>
     </div>
   );
 }

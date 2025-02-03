@@ -1,10 +1,10 @@
-body {
+/* body {
     background-image:url("../images/bg1.webp"); 
     background-size: cover;
-}
+} */
 
 
-.create-new {
+/* .create-new {
     display:flex;
     flex-direction:column;
     margin-top: 50px;
@@ -16,8 +16,8 @@ body {
     
   
     
-  }
-  .create-new>div>textarea {
+  } */
+  /* .create-new>div>textarea {
     height: 700px;
     width: 1000px;
     margin: -40px;
@@ -29,8 +29,8 @@ body {
     font-size:20px;
     font-family: cursive;
   
-  }
-  .lefth3 {
+  } */
+  /* .lefth3 {
     float:left;
     margin:-75px 0px 0px -40px;
 
@@ -45,4 +45,4 @@ body {
     background-color: #90B77D;
     font-size: 20px;
     font-weight: bold;
-  }
+  } */
