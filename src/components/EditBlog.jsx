@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import {useNavigate } from 'react-router-dom';
 
-//import '../App.css';
+import '../App.css';
 import '../style/EditBlog.css';
 
 import {sendIndexToEditBlog } from './OtherPosts.jsx';
@@ -38,7 +38,7 @@ export default  function EditBlog(){
     }
   }, []);
     return (
-        <div className="create-new">
+        <div className="editBlog">
           <div>
             <h2 className="lefth3">Edit Blog</h2>
 
@@ -48,8 +48,8 @@ export default  function EditBlog(){
               type="text"
               value={textArea}
               onChange={handleText}
-              id="createnew"
-              name="createnew"></textarea>
+              id="editBlog"
+              name="editBlog"></textarea>
           </div>
 
           <div>
