@@ -17,6 +17,7 @@ import EditBlog from "./components/EditBlog.jsx";
 
 function App() {
   const [titleArr, setTitleArr] = React.useState([]);
+
   const navigate = useNavigate();
   let textArea = "";
 
@@ -30,6 +31,7 @@ function App() {
     let generatedTitleArr = await generateContent(prompt);
     console.log(titleArr);
     setTitleArr(generatedTitleArr);
+    
 
     document.getElementById(generatetitle).style.display = "none";
     document.getElementById(dropdown).style.display = "block";
@@ -38,8 +40,12 @@ function App() {
   function handleViewBlog() {
     navigate("/view-blog"); // Call navigate here
   }
-  function handleSave() {
+  function handleSave(generatetitle, dropdown) {
     saveBlog();
+  
+    document.getElementById(generatetitle).style.display = "block";
+    document.getElementById(dropdown).style.display = "none";
+  
   }
 
   return (
@@ -52,16 +58,12 @@ function App() {
       </div>
 
       <div className="save-and-view">
-        <button
-          id="generatetitle"
-          onClick={() =>
-            GeminiContent("generatetitle", "dropdown", "createnew")
-          }
-        >
-          Generate Title
-        </button>
-        <TitleDropDown titleArr={titleArr} />
-        <button id="save" onClick={handleSave}>
+         <button id="generatetitle" onClick={() =>GeminiContent("generatetitle", "dropdown", "createnew")}>Generate Title</button> 
+         <TitleDropDown titleArr={titleArr} />
+        
+
+       
+        <button id="save" onClick={()=>handleSave("generatetitle", "dropdown")}>
           Save
         </button>
         <button id="view" onClick={handleViewBlog}>
